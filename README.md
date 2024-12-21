@@ -117,6 +117,6 @@ Notlar
 • Veritabanı bağlantı bilgileri ve kullanıcı yönetim bilgileri, UserController ve DatabaseConnection sınıflarında saklanmaktadır.
 • Proje, Strategy, Factory, Singleton ve State tasarım desenlerini kullanarak esnek ve sürdürülebilir bir yapıya sahiptir.
 
-Takım Arkadaşım:Hamza Can Altıntop
-Github Linki:  [(https://github.com/1220505072)]
+Takım Arkadaşım: Hamza Can Altıntop
+Github Linki: [(https://github.com/1220505072)]
 
