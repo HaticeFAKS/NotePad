@@ -1,7 +1,5 @@
 # NotePad
 
-KHADIJA FAKSH-1220505802
-
 Bu proje, JavaFX kullanarak geliştirilmiş bir Kullanıcı Yönetim Sistemi'dir. Sistemde, adminler kullanıcı ekleyebilir. Kullanıcılar, sisteme giriş yapabilir ve notlarını yönetebilir. Her kullanıcı, belirli bir rol (admin, user, employee) ile sisteme erişim sağlar.
 
 Proje Hakkında
