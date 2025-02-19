@@ -1,120 +1,103 @@
-# NotePad
+# 📝 NotePad 
 
-Bu proje, JavaFX kullanarak geliştirilmiş bir Kullanıcı Yönetim Sistemi'dir. Sistemde, adminler kullanıcı ekleyebilir. Kullanıcılar, sisteme giriş yapabilir ve notlarını yönetebilir. Her kullanıcı, belirli bir rol (admin, user, employee) ile sisteme erişim sağlar.
+Bu proje, JavaFX kullanarak geliştirilmiş bir **Not Defteri Yönetim Sistemi**dir. Kullanıcılar, notlarını kolayca oluşturabilir, düzenleyebilir ve yönetebilir. Notlar, farklı durumlarda (aktif veya arşivlenmiş) saklanabilir ve kullanıcının tercihine göre renklendirilebilir. Kullanıcılarrın rollerine göre belirli yetkileri bulunmaktadır.
 
-Proje Hakkında
-Bu sistem, kullanıcıların notlarını oluşturup düzenleyebileceği bir platform sunmaktadır. Ayrıca, adminler kullanıcı yönetimi işlemleri yapabilir. Sistemdeki önemli bileşenler şunlardır:
-• Admin Paneli: Adminler kullanıcı ekleyebilir ve rolleri belirleyebilir.
-• Kullanıcı Girişi: Kullanıcılar, e-posta ve şifre ile sisteme giriş yapar.
-• Not Yönetimi: Kullanıcılar notlarını yönetebilir.
-• Kayıt Olma: Yeni kullanıcılar kayıt olabilir.
 
-Kullanım
-Projede aşağıdaki ana işlevler bulunmaktadır:
 
-1. Admin Paneli
-Admin paneli, kullanıcı eklemeyi (admin, user ve employee roller seçebilmeyi) sağlar.
-• Kullanıcı Ekle: Admin, yeni kullanıcılar ekleyebilir. Kullanıcı bilgileri (ad, e-posta, şifre, rol) belirtilerek kullanıcı eklenebilir.
-• Kullanıcı Listeleme: Tüm kullanıcılar listelenebilir.
+## 🚀 Özellikler
 
-2. Kullanıcı Girişi
-Kullanıcılar, e-posta ve şifre ile sisteme giriş yapabilir. Giriş başarılı olursa, kullanıcı rolüne bağlı olarak yetkilendirilir.
-• Admin: Admin, herkesi yönetebilir.
-• Kullanıcı: Kullanıcı, kendi notlarını yönetebilir.
-• Employee: Employee, kullanıcı gibi işlem yapabilir, ancak admin yetkileri yoktur.
+- **Not Yönetimi**
+  - 📌 Not ekleme, güncelleme ve silme
+  - 📂 Notları aktif veya arşivlenmiş olarak saklama
+  - 🎨 Notlara renk atama
 
-3. Not Yönetimi
-Kullanıcılar, notlarını oluşturup düzenleyebilir. Notlar, iki durumda olabilir: aktif veya arşivlenmiş.
-• Not Ekle: Kullanıcı, başlık, içerik, renk ve durum (aktif veya arşivlenmiş) ile not ekleyebilir.
-• Not Güncelleme: Kullanıcılar mevcut notlarını güncelleyebilir.
-• Not Silme: Notlar, kullanıcı rolüne bağlı olarak silinebilir.
+- **Kullanıcı Girişi ve Yetkilendirme**
+  - 🔑 Kullanıcılar, e-posta ve şifre ile sisteme giriş yapabilir.
+  - 👤 Kullanıcı rollerine göre belirli yetkilere sahiptir (Admin, User, Employee).
 
-4. Kayıt Olma
-Yeni kullanıcılar, sisteme kayıt olabilirler. Kayıt olurken, e-posta ve şifre belirlerler.
+- **Modern Yazılım Mimarisi**
+  - 🏗️ CMV (Controller-Model-View) mimarisi
+  - 🛠️ Singleton, Factory, Strategy, State tasarım desenleri
 
-Teknolojiler
-Bu projede aşağıdaki teknolojiler ve araçlar kullanılmıştır:
-• JavaFX: Kullanıcı arayüzü (UI) için.
-• CMV Tasarımı: Model-View-Controller (CMV) mimari deseni kullanılmıştır.
-• Strategy Pattern: Not silme işlemi için kullanıcı rollerine göre farklı stratejiler uygulanmıştır.
 
-Bu proje, kullanıcı yönetimi ve not ekleme işlemleri için geliştirilmiş bir masaüstü Java uygulamasıdır. Uygulama, JavaFX kullanılarak GUI (Graphical User Interface) oluşturulmuş ve birkaç farklı tasarım deseni kullanılmıştır. Proje, Singleton, Factory, Strategy ,State tasarım desenlerini içerir ve Abstarct sınıfı ve CMV mimarisi kullanılmıştır.
 
-İçindekiler
+## 🏛️ Mimari ve Teknolojiler
 
-1. Proje Özeti
-2. Tasarım Desenleri
-o Singleton
-o Factory
-o Strategy
-o Abstract
-o State
-CMV Mimarisi ve abstract sınıflarda kullanılmıştır(NoteState ve AbstractNote). 3. Veritabanı Bağlantısı
-4. Uygulama Yapısı
-5. Kullanıcı Arayüzü
-6. Kullanım
-7. Notlar
+- **JavaFX** – Kullanıcı arayüzü geliştirme
+- **CMV Mimarisi** – Controller-Model-View yapısı
+- **Singleton** – Veritabanı bağlantısını yönetmek için
+- **Factory** – Notların oluşturulmasını soyutlamak için
+- **Strategy** – Kullanıcı rollerine göre farklı not silme stratejileri
+- **State** – Notların durum yönetimi
 
-Proje Özeti
-Bu uygulama, kullanıcıların giriş yapabileceği, şifreleri ile doğrulama yapabileceği, yeni kullanıcılar ekleyebileceği, mevcut kullanıcıları listeleyebileceği ve notlar oluşturup yönetebileceği bir sistem sunar. Her kullanıcıya belirli bir rol atanır (admin, user, employee) ve her rolün farklı yetkileri vardır. Admin, kullanıcı ekleyebilir ve yönetebilir, user kendi notlarını ekleyip düzenleyebilir, employee ise yalnızca belirli işlemleri yapabilir.
 
-Tasarım Desenleri
-Bu projede kullanılan başlıca tasarım desenleri aşağıda açıklanmıştır:
-Singleton Tasarım Deseni
-• DatabaseConnection sınıfı, veritabanı bağlantısını yönetir ve tek bir bağlantı örneği oluşturulmasını sağlar. Bu sayede her veritabanı işlemi için aynı bağlantı kullanılır, bu da kaynakların daha verimli yönetilmesine olanak tanır ve diğer yerlerden yapıcı metotla ulaşılır sadece.
-Factory Tasarım Deseni
-• AbstractNoteFactory deseni, notların oluşturulmasını soyutlar ve farklı not türlerinin eklenmesini kolaylaştırır.
-• ConcreteNoteFactory, belirli bir not türünü oluştururken, AbstractNoteFactory ise genel bir şablon sunar.
-Strategy Tasarım Deseni
-• DeleteStrategy sınıfı, kullanıcının notları silme yetkisini belirler. Kullanıcı rolüne bağlı olarak farklı silme stratejileri uygulanır. Örneğin, user rolündeki bir kullanıcı tüm notları silebilirken, employee rolündeki kullanıcı silme yetkisine sahip değildir.
-• AdminDeleteStrategy, UserDeleteStrategy ve EmployeeDeleteStrategy sınıfları, her bir kullanıcının silme işlemi üzerinde farklı haklara sahip olmasını sağlar.
 
-State Tasarım Deseni
-• NoteState sınıfı, durum için temel bir yapı oluşturur, notifyState() fonksiyonunun abstract halini içerir.
-• ActiveNoteState sınıfı, notifyState() fonksiyonuyla durum için temel bir yapı oluşturur.(aktif not)
-• InActiveNoteState sınıfı, notifyState() fonksiyonuyla durum için temel bir yapı oluşturur.(arşivlenmiş not)
+## 📌 Not Yönetimi
 
-Veritabanı Bağlantısı
-Projede Singleton tasarım deseni kullanılarak veritabanı bağlantısı yönetilmektedir. DatabaseConnection sınıfı, sadece tek bir bağlantı örneği oluşturulmasını sağlar ve bu örnek tüm uygulama boyunca kullanılır.
+**Notlar iki farklı durumda olabilir:**
+1. **Aktif Notlar** 🟢 – Kullanıcı tarafından aktif olarak kullanılan notlar
+2. **Arşivlenmiş Notlar** 🔵 – Kullanıcının erişebileceği ancak pasif durumdaki notlar
 
-Uygulama Yapısı
-Uygulama üç ana paketten (CMV) oluşmaktadır:
-1. Controller: İş mantığı ve veritabanı işlemleri burada yönetilir.
-2. Model: Notlar ve kullanıcıları temsil eden sınıflar burada yer alır.
-3. View: Uygulamanın GUI kısmını oluşturan sınıflar burada bulunur.
+**İşlevler:**
+- 📝 **Not Ekleme** – Başlık, içerik, renk ve durum belirterek not oluşturma
+- ✏️ **Not Güncelleme** – Mevcut notları düzenleme
+- 🗑️ **Not Silme** – Kullanıcı rolüne bağlı olarak silme işlemi
 
-Controller
-• UserController sınıfı, kullanıcı ekleme, listeleme, doğrulama ve kayıt işlemlerini yönetir.
-• NoteController sınıfı ise notları ekler, günceller, listeler ve siler.
 
-Model
-• User sınıfı, kullanıcıya ait bilgileri saklar.
-• ConcreteNote sınıfı, bir notun özelliklerini temsil eder.
-• Note sınıfı, soyut bir not şablonu sunar.
 
-View
-• LoginFrame: Kullanıcıların sisteme giriş yapabilmesini sağlar.
-• RegisterFrame: Yeni kullanıcı kaydı oluşturulabilir.
-• AdminView: Admin paneli üzerinden kullanıcı ekleme yapılabilir.
-• NoteView: Kullanıcıların notlarını görüntüleyebileceği ve yönetebileceği ekrandır.
+## 🎨 Kullanıcı Arayüzü
 
-Kullanıcı Arayüzü
-Uygulamanın kullanıcı arayüzü JavaFX kullanılarak oluşturulmuştur. Temel ekranlar ve işlevler şunlardır:
-1. LoginFrame: Kullanıcıların sisteme giriş yapmasını sağlar. Admin kullanıcıları ekleyebilir.
-2. RegisterFrame: Yeni kullanıcıların sisteme kayıt olmasını sağlar.
-3. AdminView: Admin paneli üzerinden kullanıcı yönetimi yapılabilir.
-4. NoteView: Kullanıcıların notlarını ekleyebileceği, düzenleyebileceği ve silebileceği ekran.
+- **📜 Not Defteri Ekranı:** Kullanıcıların notlarını listeleyebileceği, düzenleyebileceği ve yönetebileceği arayüz.
+- **🔑 Giriş Ekranı:** Kullanıcıların sisteme giriş yapmasını sağlayan ekran.
+- **🛠️ Admin Paneli:** Kullanıcı yönetimi ve rollerin atanabileceği alan.
 
-Kullanım
-1. Giriş Yap: Sisteme kullanıcı adı ve şifre ile giriş yapabilirsiniz.
-2. Admin Ekle: Giriş yaptıktan sonra admin olarak sisteme yeni admin kullanıcıları ekleyebilirsiniz.
-3. Not Ekle: Sistemdeki kullanıcılar kendi notlarını ekleyebilir ve yönetebilir.
-4. Kullanıcı Yönetimi: Admin, sisteme yeni kullanıcılar ekleyebilir ve mevcut kullanıcıları listeleyebilir.
 
-Notlar
-• Veritabanı bağlantı bilgileri ve kullanıcı yönetim bilgileri, UserController ve DatabaseConnection sınıflarında saklanmaktadır.
-• Proje, Strategy, Factory, Singleton ve State tasarım desenlerini kullanarak esnek ve sürdürülebilir bir yapıya sahiptir.
 
-Takım Arkadaşım: Hamza Can Altıntop
-Github Linki: [(https://github.com/1220505072)]
+## 📂 Proje Yapısı
+
+```
+📁 src/
+ ┣ 📂 controller/  # İş mantığını içeren sınıflar
+ ┣ 📂 model/       # Veritabanı ve not yönetim sınıfları
+ ┣ 📂 view/        # JavaFX kullanıcı arayüzü dosyaları
+ ┗ 📄 main.java    # Uygulamanın giriş noktası
+```
+## 📥 Kurulum ve Çalıştırma
+
+### 1️⃣ Projeyi İndirme
+Projeyi GitHub üzerinden aşağıdaki komut ile klonlayabilirsiniz:
+```bash
+ git clone https://github.com/HaticeFAKS/NotePad.git
+```
+
+### 2️⃣ Bağımlılıkları Kurma
+JavaFX bağımlılıklarını eklediğinizden emin olun. Eğer eksikse, aşağıdaki adımları takip edebilirsiniz:
+- JavaFX SDK'yı indirin ve projenize ekleyin.
+- IDE'nizin (IntelliJ veya Eclipse) JavaFX kütüphanelerini tanıdığından emin olun.
+
+### 3️⃣ Uygulamayı Çalıştırma
+Projeyi çalıştırmak için aşağıdaki adımları uygulayın:
+- `Main.java` dosyasını bulun.
+- IDE üzerinden **Run** tuşuna basarak çalıştırın.
+- Alternatif olarak terminalde şu komutu kullanabilirsiniz:
+```bash
+java --module-path "path_to_javafx" --add-modules javafx.controls,javafx.fxml -jar NotePad.jar
+```
+Burada `path_to_javafx` kısmını kendi sisteminize göre değiştirin.
+
+
+## 🔗 Bağlantılar
+
+👨‍💻 **Takım Arkadaşı:** Hamza Can Altıntop  
+📌 **GitHub:** [GitHub Projesi](https://github.com/1220505072)
+
+
+
+
+
+
+
+
+
+
 
